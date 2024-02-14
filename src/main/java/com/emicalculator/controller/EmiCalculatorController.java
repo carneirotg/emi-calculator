@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.emicalculator.controller.model.EmiDTO;
+import com.emicalculator.domain.Emi;
 import com.emicalculator.domain.EmiCalculator;
 import com.emicalculator.domain.exception.InvalidInputForEmiCalculationException;
 
@@ -24,10 +25,10 @@ public class EmiCalculatorController {
     }
 
     @PostMapping(value = "/calculate-emi", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Double> calculate(@RequestBody @Valid EmiDTO emiDTO) throws InvalidInputForEmiCalculationException {
+    public ResponseEntity<Emi> calculate(@RequestBody @Valid EmiDTO emiDTO) throws InvalidInputForEmiCalculationException {
 
-        var emi = emiCalculator.calculate(emiDTO.getLoanValue(), emiDTO.getYearlyInterestRate(), emiDTO.getLoanTerm());
-        return ResponseEntity.ok(emi);
+        return ResponseEntity.ok(
+            new Emi(emiCalculator.calculate(emiDTO.getLoanValue(), emiDTO.getYearlyInterestRate(), emiDTO.getLoanTerm())));
     }
 
 
