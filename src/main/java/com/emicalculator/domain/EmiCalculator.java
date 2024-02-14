@@ -2,9 +2,6 @@ package com.emicalculator.domain;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.Optional;
-
-import javax.swing.text.html.Option;
 
 import org.springframework.stereotype.Service;
 

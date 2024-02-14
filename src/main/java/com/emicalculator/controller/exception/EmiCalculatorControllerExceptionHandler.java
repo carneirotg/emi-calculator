@@ -1,8 +1,6 @@
 package com.emicalculator.controller.exception;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.HttpStatus;
