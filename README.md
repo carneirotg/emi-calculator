@@ -52,5 +52,5 @@ To calculate EMI for a loan, make a `POST` request to the `/calculate-emi` endpo
 ## Run the project
 
 - Build the project running `mvn clean install`
-- Run the project running `mvn spring-boot:run
+- Run the project running `mvn spring-boot:run`
 
