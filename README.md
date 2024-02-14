@@ -17,7 +17,7 @@ To calculate EMI for a loan, make a `POST` request to the `/calculate-emi` endpo
 #### Example request
 
 <details>
- <summary><code>POST</code> <code><b>/api/v1/calculate-emi</b></code> <code>
+ <summary><code>POST</code> <code><b>/api/v1/calculate-emi</b></code> </summary>
 
 ##### Parameters
 
@@ -40,6 +40,7 @@ To calculate EMI for a loan, make a `POST` request to the `/calculate-emi` endpo
 > ```javascript
 >  curl -X POST -H "Content-Type: application/json" --data '{ "loanValue": 100200, "yearlyInterestRate": 7, "loanTerm": 20 }' http://localhost:8080/api/v1/calculate-emi
 > ```
+
 </details>
 
 ## Dependencies
@@ -51,5 +52,5 @@ To calculate EMI for a loan, make a `POST` request to the `/calculate-emi` endpo
 ## Run the project
 
 - Build the project running `mvn clean install`
-- Run the project running `mvn spring-boot:run`
+- Run the project running `mvn spring-boot:run
 
